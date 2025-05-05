@@ -14,7 +14,7 @@ describe('Create list flow', () => {
         await expect(await ListScreen.createdListName.getValue()).toBe(listName);
     })
 
-    it.only('should add a todo item in the list', async () => {
+    it('should add a todo item in the list', async () => {
         await ListScreen.createdListName.click();
         await ListScreen.createTodoItem(faker.string.alphanumeric(10));
         await expect(await ListScreen.numberOfTodoitems.getValue()).not.toBe(0);
