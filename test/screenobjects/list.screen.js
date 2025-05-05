@@ -2,7 +2,7 @@ import BaseScreen from '../screenobjects/base.screen'
 
 class ListScreen {
 
-    get addListIcon()            { return $('~Add')}
+    get addListIcon()            { return $('//XCUIElementTypeButton[@name="Add"]')} // XPath fallback')}
     get createListBtn()          { return $('//*[@name="Create list"]') }
     get createListnameTextbox()  { return $('//XCUIElementTypeTextField[@value="List Name"]') }
     get createdListName()        { return $('//XCUIElementTypeCell//XCUIElementTypeStaticText[1]') }
